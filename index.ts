@@ -1,5 +1,25 @@
-export { useDerivWS } from './useDerivWS';
-export { useActiveSymbols } from './useActiveSymbols';
-export { useTicks } from './useTicks';
-export { useProposal } from './useProposal';
-export { useBuy } from './useBuy';
+export type {
+  AuthConfig,
+  AuthInfo,
+  DerivAccount,
+  OTPResponse,
+  TokenExchangeParams,
+  CallbackParams,
+  AuthState,
+  StoredCSRFToken,
+  StoredCodeVerifier,
+} from './auth';
+
+export type {
+  ActiveSymbol,
+  Tick,
+  TicksHistoryResponse,
+  ContractsForResponse,
+  ContractInfo,
+  DurationLimits,
+  ProposalResponse,
+  ProposalInfo,
+  BuyResponse,
+  BuyResult,
+  ProposalParams,
+} from './trading';
