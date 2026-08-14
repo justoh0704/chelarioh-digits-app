@@ -1,4 +1,3 @@
-// Auth
 export {
   buildAuthorizationUrl,
   buildSignUpUrl,
@@ -11,12 +10,23 @@ export {
   handleOAuthCallback,
   cleanupUrl,
   OAuthError,
+} from './oauth';
+
+export {
   fetchAccounts,
   getWebSocketOTP,
   logout,
+} from './accounts';
+
+export { parseReferralLink, parseLandingParams, resolveReferralViaProxy } from './referral';
+
+export {
   generateRandomBase64url,
   sha256Base64url,
   base64urlEncode,
+} from './crypto';
+
+export {
   storeCSRFToken,
   getCSRFToken,
   clearCSRFToken,
@@ -34,49 +44,4 @@ export {
   setAccountType,
   getAccountType,
   clearAllAuthData,
-  parseReferralLink,
-  parseLandingParams,
-  resolveReferralViaProxy,
-} from './auth';
-
-// Types
-export type {
-  AuthConfig,
-  AuthInfo,
-  DerivAccount,
-  OTPResponse,
-  TokenExchangeParams,
-  CallbackParams,
-  AuthState,
-  StoredCSRFToken,
-  StoredCodeVerifier,
-  ActiveSymbol,
-  Tick,
-  TicksHistoryResponse,
-  ContractsForResponse,
-  ContractInfo,
-  DurationLimits,
-  ProposalResponse,
-  ProposalInfo,
-  BuyResponse,
-  BuyResult,
-  ProposalParams,
-} from './types';
-
-// Config
-export { getAuthBaseUrl, getApiBaseUrl, getPublicWsUrl } from './config';
-
-// Utils
-export { pickDefaultSymbol } from './utils/pick-default-symbol';
-
-// WebSocket
-export { DerivWS } from './ws';
-
-// React Hooks
-export {
-  useDerivWS,
-  useActiveSymbols,
-  useTicks,
-  useProposal,
-  useBuy,
-} from './react';
+} from './storage';
